@@ -7,7 +7,7 @@ layout: default
     <div class="aside">
       <div class="info-card">
         <h1>Danqing Yin</h1>
-        <a href="linkedin.com/in/danqing-yin-412a76b7" target="_blank"><img src="http://www.linkedin.com/favicon.ico" alt="" width="25"/></a>
+        <a href="http://linkedin.com/in/danqing-yin-412a76b7" target="_blank"><img src="http://www.linkedin.com/favicon.ico" alt="" width="20"/></a>
       </div>
       <div id="particles-js"></div>
     </div>
