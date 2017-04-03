@@ -1,3 +1,4 @@
-theme: jekyll-theme-cayman
+permalink: /:title
+
 title: Danqing Yin
-description: Hello, I am Danqing
+feed: /atom.xml
