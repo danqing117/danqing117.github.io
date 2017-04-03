@@ -6,7 +6,7 @@ layout: default
   <div class="index-wrapper">
     <div class="aside">
       <div class="info-card">
-        <a class="home-menu-icon" style="color:#fff;" href="/">Danqing Yin</a>
+        <a class="home-menu-icon" style="color:#fff;">Danqing Yin</a>
         <a href="http://linkedin.com/in/danqing-yin-412a76b7" target="_blank"><img src="http://www.freeiconspng.com/uploads/linkedin-icon-31.png" alt="" width="25"/></a>
       </div>
       <div id="particles-js"></div>
