@@ -9,7 +9,7 @@ layout: default
         <h1><font size="6" face = "Agency FB">Danqing Yin</font></h1>
         <a href="http://linkedin.com/in/danqing-yin-412a76b7" target="_blank"><img src="http://www.freeiconspng.com/uploads/linkedin-icon-31.png" alt="" width="25"/></a>
       </div>
-      <div id="particles-js"></div>
+      <!--<div id="particles-js"></div>-->
     </div>
 
     <div class="index-content">
