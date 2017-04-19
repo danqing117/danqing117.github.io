@@ -20,7 +20,7 @@ Package <a href = "http://docs.python-requests.org/en/master/"> requests </a> is
 
 ## Performing HTTP Methods
 
-HTTP is a protocol to enable communications between clients and servers. Two commonly used methods are GET and POST. For example, when we open a new web page and browse the information shown on that page, we are sending a GET method to request data from a specfihttps://avatars2.githubusercontent.com/u/13260135?v=3&s=96c url. When we input a username and a password to login a website, we are sending a POST method to submit data to the website you are browsing.  
+HTTP is a protocol to enable communications between clients and servers. Two commonly used methods are GET and POST. For example, when we open a new web page and browse the information shown on that page, we are sending a GET method to request data from a specfic url. When we input a username and a password to login a website, we are sending a POST method to submit data to the website you are browsing.  
 
 To perform GET and POST method in Python code, the first step is to create a <a href="http://docs.python-requests.org/en/latest/user/advanced/"> Session object </a>. This object is to persist certain parameters across requests and it also stores cookie information.
 
