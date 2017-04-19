@@ -8,7 +8,7 @@ category: blog
 Last year I have done a project to analyze Chinese students' experience in Halifax through searching some attractions' name on <a href="http://markdown.tw">Weibo</a> (a Chinese social media), and it required me to scrape some user's data. The main obstacle is that the data is not visible until you have logged in. Therefore, this blog will focus on login approach in web scraping. I will take <a href="http://markdown.tw">Weibo</a> as an example. The full code can be found on my <a href="https://github.com/danqing117/Weibo-Scraper-Python-">Github</a>.
 
 ## Requirements
-The code is written in Python 3.0 including the following packages:
+The code was written in Python 3.0 including the following packages:
 
     import requests
 	from bs4 import BeautifulSoup
