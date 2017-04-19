@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to Login in Python Web Scraping
+title: How to Perform Login in Python Web Scraping
 description: Last year I have done a project to analyze Chinese students' experience in Halifax through searching some attractions' name on <a href="http://weibo.com">Weibo</a> (a Chinese social media), and it requires me to scrape some user's data. The main obstacle is that the data is not visible until you have logged in. Therefore, this blog will talk about login technique in web scraping.
 category: blog
 ---
