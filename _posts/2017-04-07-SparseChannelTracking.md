@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Compressed Sensing Kalman Filter
+title: Algorithm: Compressed Sensing Kalman Filter 
 description: 
 category: blog
 ---
