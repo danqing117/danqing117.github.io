@@ -26,7 +26,7 @@ If we only consider the dominant elements in \\(\boldsymbol{h}[n]\\), and denote
 
 $$\boldsymbol{Y}[n]=\mathbf{A}_\boldsymbol{l}[n]\cdot\boldsymbol{h}_\boldsymbol{l}[n] +\boldsymbol{v}[n]$$
 
-Therefore, sening matrix \\(\mathbf{A}_\boldsymbol{l}[n]\\) is of size \\(n\times m\\) and \boldsymbol{h}_\boldsymbol{l}[n] is of size \\(m\times 1\\).
+Therefore, sening matrix \\(\mathbf{A}_\boldsymbol{l}[n]\\) is of size \\(n\times m\\) and \\(\boldsymbol{h}_\boldsymbol{l}[n]\\) is of size \\(m\times 1\\).
 
 
 
