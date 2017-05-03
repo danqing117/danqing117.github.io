@@ -24,15 +24,15 @@ If we only consider the dominant elements in \\(\boldsymbol{h}[n]\\), and denote
 
 $$\boldsymbol{Y}[n]\approx\mathbf{A}_\boldsymbol{l}[n]\cdot\boldsymbol{h}_\boldsymbol{l}[n] +\boldsymbol{v}[n]$$
 
-Therefore, sening matrix \\(\mathbf{A}[n]\\) is of size \\(n\times m\\) and \\(\boldsymbol{h}_\boldsymbol{l}[n]\\) is of size \\(m\times 1\\). Simply you can think that measurement model has been 'compressed'. 
+Therefore, sensing matrix \\(\mathbf{A}[n]\\) is of size \\(n\times m\\) and \\(\boldsymbol{h}_\boldsymbol{l}[n]\\) is of size \\(m\times 1\\). Simply you can think that measurement model has been 'compressed'. 
 
-Before we can apply the compress-aided Kalman filter, we need a <a href = "https://en.wikipedia.org/wiki/Autoregressive_model">autoregressive(AR)</a> model of \\(\boldsymbol{h}[n]\\) which is a priori information (RLS do not require it). It is expressed as following:
+Before we can apply the compress-aided Kalman filter, we need an <a href = "https://en.wikipedia.org/wiki/Autoregressive_model">autoregressive(AR)</a> model of \\(\boldsymbol{h}[n]\\) which is a priori information (RLS do not require it). It is expressed as following:
 
 $$\hat{\boldsymbol{h}}_{\boldsymbol{l}}[n] = \boldsymbol{F}\hat{\boldsymbol{h}}_{\boldsymbol{l}}[n-1]+\boldsymbol{w}[n]$$ 
 
-This is an estimated model wich is can be constructed by applying the Yule-Walker equation. Here, matrix \\(\boldsymbol{F}\\) is an diagonal matrix. 
+This is an estimated model which can be constructed by applying the Yule-Walker equation. Here, matrix \\(\boldsymbol{F}\\) is an diagonal matrix. 
 
-With measurement model and state model in hand, we can implememt compress-aided Kalman filter as following:
+With measurement model and state model in hand, we can implement compress-aided Kalman filter as following:
 
 1. Initialization: 
 $$n = 0, \hat{\boldsymbol{h}}_{\boldsymbol{l}}[-1|-1] = \boldsymbol{0}_{s \times 1}, \boldsymbol{C}[-1|-1] =\boldsymbol{0}_{s\times s}$$
@@ -49,10 +49,10 @@ $$ \hat{\boldsymbol{h}}_{\boldsymbol{l}}[n|n] =  \hat{\boldsymbol{h}}_{\boldsymb
 $$\boldsymbol{C}[n|n] = \left( \boldsymbol{I} - \boldsymbol{K}[n]\boldsymbol{A}_{\boldsymbol{l}}[n]\right)\boldsymbol{C}[n|n-1]$$
 8. \\(n = n+1\\)
 
-I recomend to read reference [1] to fully understand how Kalman filter works. In the prediction step, the AR-1 state model is applied to predict the channel taps in the next iteration using the estimated channel taps in the current iteration, then the prediction covariance matrix and Kalman gain are computed. The larger Kalman gain indicates that more correction is needed.
+I recommend to read reference [1] to fully understand how Kalman filter works. In the prediction step, the AR-1 state model is applied to predict the channel taps in the next iteration using the estimated channel taps in the current iteration, then the prediction covariance matrix and Kalman gain are computed. The larger Kalman gain indicates that more correction is needed.
 
 ## Numerical Results
-I compared compress-aided Kalman filter with RLS, OMP and least suqares(LS) over tracking \\(\boldsymbol{h}[n]\\) with different level of variation (denoted by \\(\alpha\\), larger \\(\alpha\\) indicates larger variation). Measurement noise level is 20 dB, and sparsity parameter \\(\frac{n}{N} = 0.12\\). The following figures show the tracking performance of one tap. 
+I compared compress-aided Kalman filter with RLS, OMP and least squares(LS) over tracking \\(\boldsymbol{h}[n]\\) with different level of variation (denoted by \\(\alpha\\), larger \\(\alpha\\) indicates larger variation). Measurement noise level is 20 dB, and sparsity parameter \\(\frac{n}{N} = 0.12\\). The following figures show the tracking performance of one tap. 
 
 ![Git Bash](/images/githubpages/KF.png)
 Here, OFDM symbol index is the time index\\(n\\). We can notice that the black curve is the closest to the original green curve, which indicate that compress-aided Kalman filter has the smallest error.
