@@ -22,11 +22,20 @@ There are some famous algorithms that can solve this problem, such as <a href = 
 ## What Is Compress-Aided Kalman Filter?
 For the equation in the previous section, we know that \\(\boldsymbol{h}[n]\\) is a sparse vector. **Standard Kalman filter will track all the elements in that vector while compress-aided Kalman filter will only track dominant elements and other elements will be set to zero.** The reason is that tracking small-valued elements in \\(\boldsymbol{h}[n]\\) will give us larger errors and it can also make Kalman filter unstable.
 
-If we only consider the dominant elements in \\(\boldsymbol{h}[n]\\), and denote the position of those dominant element as \\(\boldsymbol{l}\\) = [\\(l_1,l_2,\dots, l_m\\)], then we can rewrite the received measurements as:
+If we only consider the dominant elements in \\(\boldsymbol{h}[n]\\), and denote the position of those dominant element as \\(\boldsymbol{l}\\) = [\\(l_1,l_2,\dots, l_m\\)], then we can rewrite the measurement model as:
 
 $$\boldsymbol{Y}[n]\approx\mathbf{A}_\boldsymbol{l}[n]\cdot\boldsymbol{h}_\boldsymbol{l}[n] +\boldsymbol{v}[n]$$
 
-Therefore, sening matrix \\(\mathbf{A}[n]\\) is of size \\(n\times m\\) and \\(\boldsymbol{h}_\boldsymbol{l}[n]\\) is of size \\(m\times 1\\). 
+Therefore, sening matrix \\(\mathbf{A}[n]\\) is of size \\(n\times m\\) and \\(\boldsymbol{h}_\boldsymbol{l}[n]\\) is of size \\(m\times 1\\). Simply you can think that measurement model has been 'compressed'. 
+
+Before we can apply the compress-aided Kalman filter, we need a <a href = "https://en.wikipedia.org/wiki/Autoregressive_model">autoregressive(AR)</a> model of \\(\boldsymbol{h}[n]\\) which is a priori information (RLS do not require it). It is expressed as following:
+
+$$\hat{\boldsymbol{h}}_{\boldsymbol{l}}[n] = \boldsymbol{F}\hat{\boldsymbol{h}}_{\boldsymbol{l}}[n-1]+\boldsymbol{w}[n]$$ 
+
+This is an estimated model wich is can be constructed by applying the Yule-Walker equation. Here, matrix \\(\boldsymbol{F}\\) is an diagonal matrix. 
+
+This AR-1 
+
 
 
 
