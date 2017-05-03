@@ -24,9 +24,9 @@ For the equation in the previous section, we know that \\(\boldsymbol{h}[n]\\) i
 
 If we only consider the dominant elements in \\(\boldsymbol{h}[n]\\), and denote the position of those dominant element as \\(\boldsymbol{l}\\) = [\\(l_1,l_2,\dots, l_m\\)], then we can rewrite the received measurements as:
 
-$$\boldsymbol{Y}[n]=\mathbf{A}_\boldsymbol{l}[n]\cdot\boldsymbol{h}_\boldsymbol{l}[n] +\boldsymbol{v}[n]$$
+$$\boldsymbol{Y}[n]\approx\mathbf{A}_\boldsymbol{l}[n]\cdot\boldsymbol{h}_\boldsymbol{l}[n] +\boldsymbol{v}[n]$$
 
-Therefore, sening matrix \\(\mathbf{A}[n]\\) is of size \\(n\times m\\) and \\(\boldsymbol{h}_\boldsymbol{l}[n]\\) is of size \\(m\times 1\\). \\(\mathbf{A}_\boldsymbol{l}[n]\\)
+Therefore, sening matrix \\(\mathbf{A}[n]\\) is of size \\(n\times m\\) and \\(\boldsymbol{h}_\boldsymbol{l}[n]\\) is of size \\(m\times 1\\). 
 
 
 
