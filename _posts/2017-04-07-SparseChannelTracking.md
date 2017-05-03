@@ -22,6 +22,12 @@ There are some famous algorithms that can solve this problem, such as <a href = 
 ## What Is Compress-Aided Kalman Filter?
 For the equation in the previous section, we know that \\(\boldsymbol{h}[n]\\) is a sparse vector. **Standard Kalman filter will track all the elements in that vector while compress-aided Kalman filter will only track dominant elements and other elements will be set to zero.** The reason is that tracking small-valued elements in \\(\boldsymbol{h}[n]\\) will give us larger errors and it can also make Kalman filter unstable.
 
+If we only consider the dominant elements in \\(\boldsymbol{h}[n]\\), and denote the position of those dominant element as \\(\boldsymbol{l} = [l_1,l_2,\dots,l_m](m<N)\\), then we can rewrite the received measurements as:
+
+$$\boldsymbol{Y}[n]=\mathbf{A}_\boldsymbol{l}[n]\cdot\boldsymbol{h}_\boldsymbol{l}[n] +\boldsymbol{v}[n]$$
+
+Therefore, sening matrix \\(\mathbf{A}_\boldsymbol{l}[n]\\) is of size \\(n\times m\\) and \boldsymbol{h}_\boldsymbol{l}[n] is of size \\(m\times 1\\).
+
 
 
 
