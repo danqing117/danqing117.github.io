@@ -20,7 +20,7 @@ It is ok that you may not understand how this equation comes, because this examp
 There are some famous algorithms that can solve this problem, such as <a href = "https://en.wikipedia.org/wiki/Recursive_least_squares_filter">RLS</a>, <a href = "https://en.wikipedia.org/wiki/Kalman_filter">standard Kalman filter</a> and <a href = "http://scikit-learn.org/stable/auto_examples/linear_model/plot_omp.html">OMP</a>. RLS and standard Kalman filter are both recursive algorithms, using previous measurements to predict the current estimate, therefore, they work at real time. As for OMP in this scenario, it is not recursive but only update the estimate using current measurements. For benchmark, the results of these three algorithms will be compared.
 
 ## What Is Compress-Aided Kalman Filter?
-For the equation in the previous section, we know that \\(\boldsymbol{h}[n]\\) is a sparse vector. **Standard Kalman filter will track all the elements in that vector while compress-aided Kalman filter will only track dominant elements and other elements will be set to zero.** 
+For the equation in the previous section, we know that \\(\boldsymbol{h}[n]\\) is a sparse vector. **Standard Kalman filter will track all the elements in that vector while compress-aided Kalman filter will only track dominant elements and other elements will be set to zero.** The reason is that tracking small-valued elements in \\(\boldsymbol{h}[n]\\) will give us larger errors and it can also make Kalman filter unstable.
 
 
 
