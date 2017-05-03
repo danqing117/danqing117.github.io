@@ -37,12 +37,11 @@ This is an estimated model wich is can be constructed by applying the Yule-Walke
 With measurement model and state model in hand, we can implememt compress-aided Kalman filter as following:
 
 1. Initialization: 
-
 $$n = 0, \hat{\boldsymbol{h}}_{\boldsymbol{l}}[-1|-1] = \boldsymbol{0}_{s \times 1}, \boldsymbol{C}[-1|-1] =\boldsymbol{0}_{s\times s}$$
 2. Repeat following
 3. Prediction: 
-
 $$\hat{\boldsymbol{h}}_{\boldsymbol{l}}[n|n-1] = \boldsymbol{F}\hat{\boldsymbol{h}}_{\boldsymbol{l}}[n-1|n-1]$$
+4. Minimum prediction covariance matrix:
 
 I recomend to read reference [1] to fully understand how Kalman filter works. In the prediction step, the AR-1 state model is applied to predict the channel taps in the next iteration using the estimated channel taps in the current iteration, then the prediction covariance matrix and Kalman gain are computed. The larger Kalman gain indicates that more correction is needed.
 
