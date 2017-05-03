@@ -42,6 +42,7 @@ $$n = 0, \hat{\boldsymbol{h}}_{\boldsymbol{l}}[-1|-1] = \boldsymbol{0}_{s \times
 3. Prediction: 
 $$\hat{\boldsymbol{h}}_{\boldsymbol{l}}[n|n-1] = \boldsymbol{F}\hat{\boldsymbol{h}}_{\boldsymbol{l}}[n-1|n-1]$$
 4. Minimum prediction covariance matrix:
+$$\boldsymbol{C}[n|n-1] =\boldsymbol{F} \boldsymbol{C}[n-1|n-1]\boldsymbol{F}^{h} +\boldsymbol{W}$$
 
 I recomend to read reference [1] to fully understand how Kalman filter works. In the prediction step, the AR-1 state model is applied to predict the channel taps in the next iteration using the estimated channel taps in the current iteration, then the prediction covariance matrix and Kalman gain are computed. The larger Kalman gain indicates that more correction is needed.
 
@@ -50,7 +51,7 @@ I compared compress-aided Kalman filter with RLS, OMP and least suqares(LS) over
 
 ![Git Bash](/images/githubpages/KF.png)
 
-# Reference
+## Reference
 1. Steven M Kay. Fundamentals of statistical signal processing, volume i: estimation theory. 1993.
 
 
