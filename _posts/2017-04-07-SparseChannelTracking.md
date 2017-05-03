@@ -43,6 +43,13 @@ $$n = 0, \hat{\boldsymbol{h}}_{\boldsymbol{l}}[-1|-1] = \boldsymbol{0}_{s \times
 $$\hat{\boldsymbol{h}}_{\boldsymbol{l}}[n|n-1] = \boldsymbol{F}\hat{\boldsymbol{h}}_{\boldsymbol{l}}[n-1|n-1]$$
 4. Minimum prediction covariance matrix:
 $$\boldsymbol{C}[n|n-1] =\boldsymbol{F} \boldsymbol{C}[n-1|n-1]\boldsymbol{F}^{h} +\boldsymbol{W}$$
+5. Kalman gain matrix: 
+$$\boldsymbol{K}[n] = \boldsymbol{C}[n|n-1]\boldsymbol{A}^h_{\boldsymbol{l}}[n]\left(\boldsymbol{V}+\boldsymbol{A}_{\boldsymbol{l}}[n]\boldsymbol{C}[n|n-1]\boldsymbol{A}^h_{\boldsymbol{l}}[n]\right)^{-1}$$
+6. Correction: 
+$$\hat{\boldsymbol{h}}_{\boldsymbol{l}}[n|n] =  \hat{\boldsymbol{h}}_{\boldsymbol{l}}[n|n-1] + \boldsymbol{K}[n]\left(\boldsymbol{Y}_{\boldsymbol{p}}[n] -\boldsymbol{A}_{\boldsymbol{l}}[n] \hat{\boldsymbol{h}}_{\boldsymbol{l}}[n|n-1]  \right$$
+7. Minimum covariance matrix: 
+$$\boldsymbol{C}[n|n] = \left( \boldsymbol{I} - \boldsymbol{K}[n]\boldsymbol{A}_{\boldsymbol{l}}[n]\right)\boldsymbol{C}[n|n-1]$$
+8. \\(n = n+1\\)
 
 I recomend to read reference [1] to fully understand how Kalman filter works. In the prediction step, the AR-1 state model is applied to predict the channel taps in the next iteration using the estimated channel taps in the current iteration, then the prediction covariance matrix and Kalman gain are computed. The larger Kalman gain indicates that more correction is needed.
 
