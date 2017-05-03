@@ -57,6 +57,7 @@ I recomend to read reference [1] to fully understand how Kalman filter works. In
 I compared compress-aided Kalman filter with RLS, OMP and least suqares(LS) over tracking \\(\boldsymbol{h}[n]\\) with different level of variation (denoted by \\(\alpha\\), larger \\(\alpha\\) indicates larger variation). Measurement noise level is 20 dB, and sparsity parameter \\(\frac{n}{N} = 0.12\\). The following figures show the tracking performance of one tap. 
 
 ![Git Bash](/images/githubpages/KF.png)
+Here, OFDM symbol index is the time index\\(n\\). We can notice that the black curve is the closest to the original green curve, which indicate that compress-aided Kalman filter has the smallest error.
 
 ## Reference
 1. Steven M Kay. Fundamentals of statistical signal processing, volume i: estimation theory. 1993.
