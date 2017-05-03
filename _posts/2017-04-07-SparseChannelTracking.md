@@ -41,9 +41,9 @@ With measurement model and state model in hand, we can implememt compress-aided 
 $$n = 0, \hat{\boldsymbol{h}}_{\boldsymbol{l}}[-1|-1] = \boldsymbol{0}_{s \times 1}, \boldsymbol{C}[-1|-1] =\boldsymbol{0}_{s\times s}$$
 2. Repeat following
 
-I recomend to read reference [1] to fully understand how Kalman filter works. In the prediction step, the AR-1 state model is applied to predict the channel taps in the next iteration using the estimated channel taps in the current iteration, then the prediction covariance matrix \\(\boldsymbol{C}[n|n-1]\\) and Kalman gain \\(\boldsymbol{K}[n]\\) are computed. The larger Kalman gain indicates that more correction is needed.
+I recomend to read reference [1] to fully understand how Kalman filter works. In the prediction step, the AR-1 state model is applied to predict the channel taps in the next iteration using the estimated channel taps in the current iteration, then the prediction covariance matrix \\(\boldsymbol{C}\\)[n|n-1] and Kalman gain \\(\boldsymbol{K}[n]\\) are computed. The larger Kalman gain indicates that more correction is needed.
 
-# Numerical Results
+## Numerical Results
 I compared compress-aided Kalman filter with RLS, OMP and least suqares(LS) over tracking \\(\boldsymbol{h}[n]\\) with different level of variation (denoted by \\(\alpha\\), larger \\(\alpha\\) indicates larger variation). Measurement noise level is 20 dB, and sparsity parameter \\(\frac{n}{N} = 0.12\\). The following figures show the tracking performance of one tap. 
 
 
