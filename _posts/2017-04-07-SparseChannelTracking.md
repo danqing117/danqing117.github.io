@@ -46,7 +46,7 @@ $$\boldsymbol{C}[n|n-1] =\boldsymbol{F} \boldsymbol{C}[n-1|n-1]\boldsymbol{F}^{h
 5. Kalman gain matrix: 
 $$\boldsymbol{K}[n] = \boldsymbol{C}[n|n-1]\boldsymbol{A}^h_{\boldsymbol{l}}[n]\left(\boldsymbol{V}+\boldsymbol{A}_{\boldsymbol{l}}[n]\boldsymbol{C}[n|n-1]\boldsymbol{A}^h_{\boldsymbol{l}}[n]\right)^{-1}$$
 6. Correction: 
-$$\hat{\boldsymbol{h}}_{\boldsymbol{l}}[n|n] =  \hat{\boldsymbol{h}}_{\boldsymbol{l}}[n|n-1] + \boldsymbol{K}[n]\left(\boldsymbol{Y}_{\boldsymbol{p}}[n] -\boldsymbol{A}_{\boldsymbol{l}}[n] \hat{\boldsymbol{h}}_{\boldsymbol{l}}[n|n-1]  \right$$
+$$\hat{\boldsymbol{h}}_{\boldsymbol{l}}[n|n] =  \hat{\boldsymbol{h}}_{\boldsymbol{l}}[n|n-1] + \boldsymbol{K}[n]\boldsymbol{Y}_{\boldsymbol{p}}[n] -\boldsymbol{A}_{\boldsymbol{l}}[n] \hat{\boldsymbol{h}}_{\boldsymbol{l}}[n|n-1] $$
 7. Minimum covariance matrix: 
 $$\boldsymbol{C}[n|n] = \left( \boldsymbol{I} - \boldsymbol{K}[n]\boldsymbol{A}_{\boldsymbol{l}}[n]\right)\boldsymbol{C}[n|n-1]$$
 8. \\(n = n+1\\)
