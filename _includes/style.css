@@ -167,6 +167,7 @@ a.external:hover {
   max-width: 500px;
   /*background: #59a0b0;*/
   background-image:url("images/front-pic1.JPG");
+  background-size: round auto;
 }
 @media screen and (max-width: 767px) {
   .index-wrapper .aside {
